@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://twitter.jpg" type="Texture" id=1]
+[ext_resource path="res://TwitterButtonPress.cs" type="Script" id=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TwitterButton" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -443.773
+margin_top = -331.733
+margin_right = 501.227
+margin_bottom = 319.267
+rect_scale = Vector2( 0.2, 0.2 )
+rect_pivot_offset = Vector2( 465, 325 )
+texture_normal = ExtResource( 1 )
+script = ExtResource( 2 )
+TwitterHandler = "ryynosaur"
+[connection signal="pressed" from="TwitterButton" to="TwitterButton" method="_on_TwitterButton_pressed"]
